@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto Pesona Kalimantan Utara</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 20px 20px rgba(0,0,0,0.1);
+        }
+        .dashboard-container {
+            padding: 20px;
+        }
+        .navbar-brand {
+            font-weight: 700;
+        }
+        .gallery-container {
+            padding: 20px 0;
+        }
+        .gallery-title {
+            text-align: center;
+            margin: 30px 0;
+            color: #343a40;
+        }
+        .gallery-item {
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover img {
+            opacity: 0.9;
+        }
+        .image-caption {
+            padding: 15px;
+            background-color: white;
+            text-align: center;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="login-container" id="loginPage">
+        <h2 class="text-center mb-4">Login</h2>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+    </div>
+
+    <!-- Dashboard Content (hidden initially) -->
+    <div id="dashboardPage" style="display:none">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Galeri Foto</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="rahman_galeri_foto.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tentang.html">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kontak.html">Kontak</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <button class="btn btn-outline-light" id="logoutBtn">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Gallery Content -->
+        <div class="container gallery-container">
+            <h2 class="gallery-title">Galeri Pesona Kalimantan Utara</h2>
+
+            <div class="row">
+                <!-- Foto 1 -->
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="gallery-item">
+                        <img src="pulausebatik.png"
+                        alt="Pulau Sebatik" class="img-fluid">
+                        <div class="image-caption">
+                            <h5>Pulau Sebatik di Nunukan</h5>
+                            <p class="text-muted">Menampilkan hamparan hijau, garis pantai, dan suasana pesisir yang tenang dan alami.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="gallery-item">
+                        <img src="pulausapi.png" 
+                        alt="Desa Wisata Pulau Sapi" class="img-fluid">
+                        <div class="image-caption">
+                            <h5>Pulau Sapi di Nunukan</h5>
+                            <p class="text-muted">Alam hijau yang menyegarkan, lanskap sungai, serta suasana desa yang asri dan tenang.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="gallery-item">
+                        <img src="airterjungunungrian.png"
+                        alt="Gunung Rian" class="img-fluid">
+                        <div class="image-caption">
+                            <h5>Gunung Rian di Tana Tidung</h5>
+                            <p class="text-muted">Menampilkan suasana hutan tropis asri, aliran air yang jernih, serta formasi air terjun yang memesona.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="gallery-item">
+                        <img src="pantaiamal.png"
+                        alt="Pantai Amal" class="img-fluid">
+                        <div class="image-caption">
+                            <h5>Pantai Amal di Tarakan</h5>
+                            <p class="text-muted">Garis pantai yang landai dengan pasir cokelat, pepohonan rindang, spot foto menarik, serta suasana yang cocok untuk santai atau menikmati sunset.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="gallery-item">
+                        <img src="pantaitanahkuning.png"
+                        alt="Pantai Tanah Kuning" class="img-fluid">
+                        <div class="image-caption">
+                            <h5>Pantai Tanah Kuning di Bulungan</h5>
+                            <p class="text-muted">Menunjukkan hamparan pasir cerah, air laut yang tenang, dan panorama yang cocok untuk bersantai atau menikmati momen sunrise/sunset.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="col-md-4 col-sm-6 col-12">
+                    <div class="gallery-item">
+                        <img src="gunungputih.png"
+                        alt="Gunung Putih" class="img-fluid">
+                        <div class="image-caption">
+                            <h5>Gunung Putih di Bulungan</h5>
+                            <p class="text-muted">Pemandangan tebing batu kapur berwarna putih terang, jalur anak tangga di area pendakian, dan panorama alam sekitar yang menawan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container text-center">
+                <p>&copy; 2025 Muhammad Abdurrahmansyah. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if(username === 'kaze' && password === 'ily') {
+                document.getElementById('loginPage').style.display = 'none';
+                document.getElementById('dashboardPage').style.display = 'block';
+            } else {
+                alert('Username/password salah!');
+            }
+        });           
+
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            if(confirm('Apakah Anda yakin ingin logout?')) {
+                document.getElementById('dashboardPage').style.display = 'none';
+                document.getElementById('loginPage').style.display = 'block';
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
